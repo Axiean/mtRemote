@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Botton from "../components/buttom/botton";
+import Button from "../components/buttom/button";
 import { commandButtons } from "../constants/constants";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {commandButtons.map((i) => {
-        return <Botton key={i.name} item={i} />;
+        return <Button key={i.name} item={i} />;
       })}
     </div>
   );

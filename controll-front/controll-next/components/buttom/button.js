@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-function Botton({ item }) {
+function Button({ item }) {
   const [sub, setSub] = useState(false);
   const [music, setMusic] = useState("");
   const handleRequest = async (value) => {
     let res = await axios.get(
-      `http://192.168.182.201/commands/${item.category}`,
+      `http://<YOUR_LOCAL_IP>/commands/${item.category}`,
       {
         headers: { data: value },
       }
@@ -63,4 +63,4 @@ function Botton({ item }) {
   );
 }
 
-export default Botton;
+export default Button;
