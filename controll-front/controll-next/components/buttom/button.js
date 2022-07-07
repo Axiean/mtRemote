@@ -5,7 +5,7 @@ function Button({ item }) {
   const [music, setMusic] = useState("");
   const handleRequest = async (value) => {
     let res = await axios.get(
-      `http://<YOUR_LOCAL_IP>/commands/${item.category}`,
+      `http://192.168.1.174/commands/${item.category}`,
       {
         headers: { data: value },
       }
